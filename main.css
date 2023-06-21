@@ -5,7 +5,7 @@
 
   body{
     width: 100%;
-    height: 100vh;
+    height: 92vh;
     background-color: greenyellow;
     margin-top: 8vh;
   }
@@ -18,15 +18,19 @@
     float: left;
     margin-top: 10vh;
     /* margin-left: 3vw; */
-    width: 45%;
+    /* width: 45%; */
   }
 
-  /* .column.side{
+  .column.side{
     width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5vw;
   }
   .column.main{
     width: 55%;
-  } */
+  }
    
   /* 响应式布局 - 小于 600 px 时改为上下布局 */
   @media screen and (max-width: 600px) {
@@ -34,12 +38,12 @@
       width: 100%;
     }
   }
-  .column.side{
+  /* .column.side{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 5vw;
-  }
+  } */
   .text-align{
     display: flex;
     flex-direction: column;
@@ -62,8 +66,8 @@
   }
 
   #canvas-container {
-    width: 45vw;
-    height: 45vh;
+    width: 55vw;
+    height: 55vh;
     background-image: url("/test.png") ;
     background-size: cover;
     border: 1px solid black;
