@@ -1,0 +1,97 @@
+  #title{
+    margin-left: 1.5vw;
+  }
+  /* 创建2个不相等的列 */
+  .column {
+    float: left;
+    margin-top: 10vh;
+    /* margin-left: 3vw; */
+    width: 45%;
+  }
+
+  /* .column.side{
+    width: 35%;
+  }
+  .column.main{
+    width: 55%;
+  } */
+   
+  /* 响应式布局 - 小于 600 px 时改为上下布局 */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  .column.side{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5vw;
+  }
+  .text-align{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .text-align div{
+    margin-right: 4vw;
+  }
+
+  #text{
+    width: 30vw;
+  }
+
+  #next{
+    font-size: large;
+    font-weight: bolder;
+    margin-top: 3vh;
+  }
+
+  #canvas-container {
+    width: 45vw;
+    height: 45vh;
+    background-image: url("/test.png") ;
+    background-size: cover;
+    border: 1px solid black;
+  }
+  #switch-scene{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #switch-scene a{
+    /* margin-left: 1.5vw; */
+    font-size: larger;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  /* unvisited link */
+    a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: black;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+  #text a{
+    background-color: yellow;
+    font-weight: bolder;
+  }
