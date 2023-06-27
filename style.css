@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
   }
   section{
     display: flex;
@@ -102,12 +102,14 @@
   .main canvas{
     width: 94vw;
     height: 70vh;
+    background: url(./scene.png);
     border: 1px solid white;
   }
 
   #description{
-    padding-top: 3%;
+    padding-top: 1%;
     width: 70vw;
+    line-height: 140%;
   }
 
   #description a{
