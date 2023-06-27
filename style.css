@@ -1,79 +1,31 @@
-  *{
+*{
     margin:0;
     padding: 0;
   }
 
   body{
     width: 100%;
-    height: 92vh;
-    background-color: greenyellow;
-    margin-top: 8vh;
+    background-color: black;
+    color:white;
   }
 
-  #title h1{
-    margin-left: 5vw;
-  }
-  /* 创建2个不相等的列 */
-  .column {
-    float: left;
-    margin-top: 10vh;
-  }
-
-  .column.side{
-    width: 35%;
+  .header{
+    padding: 1% 3% 1% 3%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 5vw;
-  }
-  .column.main{
-    width: 55%;
-  }
-   
-  /* 响应式布局 - 小于 600 px 时改为上下布局 */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
-
-  .text-align{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-
-  .text-align div{
-    margin-right: 4vw;
-  }
-
-  #text{
-    width: 30vw;
-  }
-
-  #next{
-    font-size: large;
-    font-weight: bolder;
-    margin-top: 3vh;
-  }
-
-  #canvas-container {
-    width: 55vw;
-    height: 55vh;
-    background-image: url("/test.png") ;
-    background-size: cover;
-    border: 1px solid black;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   section{
-    margin-top: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    font-size: small;
   }
 
   section .section-item{
+    margin-left:3vw;
     position: relative;
     display: flex;
     justify-content: center;
@@ -102,12 +54,14 @@
 
   /* begin effect */
   section:hover .section-item{
+    /* filter: blur(10px); */
     transform: scale(0.8);
     transition: filter 0.5s, transform 0.5s;
   }
 
   /* cancel effect */
   section .section-item:hover{
+    /* filter: blur(0px); */
     transform: scale(1.1);
     transition: filter 0.5s, transform 0.5s;
   }
@@ -137,13 +91,36 @@
     transition: opacity 0.5s;
   }
 
+  .main{
+    margin-left: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
+  .main canvas{
+    width: 94vw;
+    height: 70vh;
+    border: 1px solid white;
+  }
+
+  #description{
+    padding-top: 3%;
+    width: 70vw;
+  }
+
+  #description a{
+    background-color: yellow;
+  }
+  
   a{
+    color: black;
     text-decoration: none;
   }
 
   /* unvisited link */
-    a:link {
+  a:link {
     color: red;
   }
   
@@ -156,14 +133,10 @@
   a:hover {
     color: hotpink;
     text-decoration: underline;
+    cursor: pointer;
   }
   
   /* selected link */
   a:active {
     color: blue;
-  }
-
-  #text a{
-    background-color: yellow;
-    font-weight: bolder;
   }
